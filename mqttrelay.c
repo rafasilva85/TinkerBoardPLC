@@ -12,38 +12,6 @@
 
 volatile MQTTClient_deliveryToken deliveredtoken;
 
-void delivered(void *context, MQTTClient_deliveryToken dt)
-{
-    printf("Message with token value %d delivery confirmed\n", dt);
-    deliveredtoken = dt;
-}
-
-int msgarrvd(void *context, char *topicName, int topicLen, MQTTClient_message *message)
-{
-    int i;
-    char* payloadptr;
-    printf("Message arrived\n");
-    printf("     topic: %s\n", topicName);
-    printf("   message: ");
-    payloadptr = message->payload;
-
-    for(i=0; i<message->payloadlen; i++)
-    {
-        putchar(*payloadptr++);
-    }
-    putchar('\n');
-
-    MQTTClient_freeMessage(&message);
-    MQTTClient_free(topicName);
-    return 1;
-}
-
-void connlost(void *context, char *cause)
-{
-    printf("\nConnection lost\n");
-    printf("     cause: %s\n", cause);
-}
-
 // #define LED 0 matches with ASUS_GPIO 164! This can be checked with command 'sudo gpio readall'.
 #define RELAY0 0 
 #define RELAY1 2
@@ -53,6 +21,84 @@ void connlost(void *context, char *cause)
 #define RELAY5 23
 #define RELAY6 24
 #define RELAY7 25
+
+void switchrl(char relay)
+{
+	
+	switch(relay)
+	{
+	  case '0':
+		if(digitalRead(RELAY0)==HIGH)
+		{
+		  digitalWrite(RELAY0, LOW);
+		}else{
+		  digitalWrite(RELAY0, HIGH);	
+		}
+		break;
+	  case '1':
+		if(digitalRead(RELAY1)==HIGH)
+		{
+		  digitalWrite(RELAY1, LOW);
+		}else{
+		  digitalWrite(RELAY1, HIGH);	
+		}
+		break;
+
+	  case '2':
+		if(digitalRead(RELAY2)==HIGH)
+		{
+		  digitalWrite(RELAY2, LOW);
+		}else{
+		  digitalWrite(RELAY2, HIGH);	
+		}
+		break;
+
+	  case '3':
+		if(digitalRead(RELAY3)==HIGH)
+		{
+		  digitalWrite(RELAY3, LOW);
+		}else{
+		  digitalWrite(RELAY3, HIGH);	
+		}
+		break;
+
+	  case '4':
+		if(digitalRead(RELAY4)==HIGH)
+		{
+		  digitalWrite(RELAY4, LOW);
+		}else{
+		  digitalWrite(RELAY4, HIGH);	
+		}
+		break;
+
+	  case '5':
+		if(digitalRead(RELAY5)==HIGH)
+		{
+		  digitalWrite(RELAY5, LOW);
+		}else{
+		  digitalWrite(RELAY5, HIGH);	
+		}
+		break;
+
+	  case '6':
+		if(digitalRead(RELAY6)==HIGH)
+		{
+		  digitalWrite(RELAY6, LOW);
+		}else{
+		  digitalWrite(RELAY6, HIGH);	
+		}
+		break;
+
+	  case '7':
+		if(digitalRead(RELAY7)==HIGH)
+		{
+		  digitalWrite(RELAY7, LOW);
+		}else{
+		  digitalWrite(RELAY7, HIGH);	
+		}
+		break;
+	}
+}
 
 void initRELAYBoard()
 {
@@ -77,6 +123,41 @@ void initRELAYBoard()
     digitalWrite(RELAY5,HIGH);
     digitalWrite(RELAY6,HIGH);
     digitalWrite(RELAY7,HIGH);
+}
+
+
+void delivered(void *context, MQTTClient_deliveryToken dt)
+{
+    printf("Message with token value %d delivery confirmed\n", dt);
+    deliveredtoken = dt;
+}
+
+int msgarrvd(void *context, char *topicName, int topicLen, MQTTClient_message *message)
+{
+    int i;
+    char* payloadptr;
+    printf("Message arrived\n");
+    printf("     topic: %s\n", topicName);
+    printf("   message: ");
+    payloadptr = message->payload;
+
+    for(i=0; i<message->payloadlen; i++)
+    {
+      putchar(*payloadptr);
+    }
+      putchar('\n');
+
+    switchrl(*payloadptr);
+
+    MQTTClient_freeMessage(&message);
+    MQTTClient_free(topicName);
+    return 1;
+}
+
+void connlost(void *context, char *cause)
+{
+    printf("\nConnection lost\n");
+    printf("     cause: %s\n", cause);
 }
 
 int main(int argc, char* argv[])
