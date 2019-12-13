@@ -28,74 +28,28 @@ void switchrl(char relay)
 	switch(relay)
 	{
 	  case '0':
-		if(digitalRead(RELAY0)==HIGH)
-		{
-		  digitalWrite(RELAY0, LOW);
-		}else{
-		  digitalWrite(RELAY0, HIGH);	
-		}
-		break;
+        digitalWrite(RELAY0, !digitalRead(RELAY0));	
+        break;
 	  case '1':
-		if(digitalRead(RELAY1)==HIGH)
-		{
-		  digitalWrite(RELAY1, LOW);
-		}else{
-		  digitalWrite(RELAY1, HIGH);	
-		}
+        digitalWrite(RELAY1, !digitalRead(RELAY0));	
 		break;
-
 	  case '2':
-		if(digitalRead(RELAY2)==HIGH)
-		{
-		  digitalWrite(RELAY2, LOW);
-		}else{
-		  digitalWrite(RELAY2, HIGH);	
-		}
+        digitalWrite(RELAY2, !digitalRead(RELAY0));	
 		break;
-
-	  case '3':
-		if(digitalRead(RELAY3)==HIGH)
-		{
-		  digitalWrite(RELAY3, LOW);
-		}else{
-		  digitalWrite(RELAY3, HIGH);	
-		}
+    case '3':
+        digitalWrite(RELAY3, !digitalRead(RELAY0));	
 		break;
-
 	  case '4':
-		if(digitalRead(RELAY4)==HIGH)
-		{
-		  digitalWrite(RELAY4, LOW);
-		}else{
-		  digitalWrite(RELAY4, HIGH);	
-		}
+        digitalWrite(RELAY4, !digitalRead(RELAY0));	
 		break;
-
 	  case '5':
-		if(digitalRead(RELAY5)==HIGH)
-		{
-		  digitalWrite(RELAY5, LOW);
-		}else{
-		  digitalWrite(RELAY5, HIGH);	
-		}
+        digitalWrite(RELAY5, !digitalRead(RELAY0));	
 		break;
-
 	  case '6':
-		if(digitalRead(RELAY6)==HIGH)
-		{
-		  digitalWrite(RELAY6, LOW);
-		}else{
-		  digitalWrite(RELAY6, HIGH);	
-		}
+        digitalWrite(RELAY6, !digitalRead(RELAY0));	
 		break;
-
 	  case '7':
-		if(digitalRead(RELAY7)==HIGH)
-		{
-		  digitalWrite(RELAY7, LOW);
-		}else{
-		  digitalWrite(RELAY7, HIGH);	
-		}
+        digitalWrite(RELAY7, !digitalRead(RELAY0));	
 		break;
 	}
 }
@@ -141,12 +95,6 @@ int msgarrvd(void *context, char *topicName, int topicLen, MQTTClient_message *m
     printf("   message: ");
     payloadptr = message->payload;
 
-    for(i=0; i<message->payloadlen; i++)
-    {
-      putchar(*payloadptr);
-    }
-      putchar('\n');
-
     switchrl(*payloadptr);
 
     MQTTClient_freeMessage(&message);
@@ -169,22 +117,30 @@ int main(int argc, char* argv[])
     int ch;
     MQTTClient_create(&client, ADDRESS, CLIENTID,
         MQTTCLIENT_PERSISTENCE_NONE, NULL);
+
     conn_opts.keepAliveInterval = 20;
     conn_opts.cleansession = 1;
+
     MQTTClient_setCallbacks(client, NULL, connlost, msgarrvd, delivered);
+
     if ((rc = MQTTClient_connect(client, &conn_opts)) != MQTTCLIENT_SUCCESS)
     {
         printf("Failed to connect, return code %d\n", rc);
         exit(EXIT_FAILURE);
     }
+
     printf("Subscribing to topic %s\nfor client %s using QoS%d\n\n"
            "Press Q<Enter> to quit\n\n", TOPIC, CLIENTID, QOS);
+
     MQTTClient_subscribe(client, TOPIC, QOS);
+
     do
     {
         ch = getchar();
     } while(ch!='Q' && ch != 'q');
+
     MQTTClient_disconnect(client, 10000);
     MQTTClient_destroy(&client);
+
     return rc;
 }
