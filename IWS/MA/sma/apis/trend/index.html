@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../resources/libs/angular-material_1_0_9/angular-material.css" />
+    <link rel="stylesheet" type="text/css" href="./build/build.min.css" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Trend Control</title>
+  <script>
+    if ( 'serviceWorker' in navigator && window.location.href.toLowerCase().indexOf('file://') < 0) {
+      window.addEventListener( 'load', function () {
+        navigator.serviceWorker.register('sw.js');
+      });
+    }
+  </script>
+</head>
+
+<body>
+    <div ng-controller="SmaTrendController">
+        <div class="chart-container">
+            <div class="loader">
+                <div style="height:calc(50% - 16px)"></div>
+                <img src="img/icons/loading.gif" width="32" height="32" />
+            </div>
+        </div>
+    </div>
+
+    <!--The bellow lines cannot be removed-->
+    <script src="../resources/libs/jquery_3_2_1/dist/jquery.min.js"></script>
+    <script src="../resources/libs/d3_3_5_17/d3.min.js"></script>
+    <script src="../resources/libs/angular_1_3_15/angular.min.js"></script>
+    <script src="../resources/libs/angular-animate_1_5_3/angular-animate.min.js"></script>
+    <script src="../resources/libs/angular-aria_1_5_3/angular-aria.min.js"></script>
+    <script src="../resources/libs/angular-messages_1_5_3/angular-messages.min.js"></script>
+    <script src="../resources/libs/angular-material_1_0_9/angular-material.min.js"></script>
+    <script src="../resources/libs/hammerjs_2_0_8/hammer.min.js"></script>
+    <script src="../resources/libs/eventEmitter_5_1_0/eventEmitter.min.js"></script>
+	<script src="../resources/libs/moment_2_19_1/min/moment.min.js"></script>
+    <script src="./depends/charts.js"></script>
+    <script src="../resources/apis/proxy.js"></script>
+    <script src="./build/build.min.js"></script>
+</body>
+
+</html>

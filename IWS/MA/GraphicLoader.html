@@ -1,0 +1,104 @@
+﻿<html>
+
+<head>
+    <script src="sma/apis/resources/libs/angular_1_3_15/angular.min.js"></script>
+    <script src="sma/apis/resources/libs/angular-animate_1_5_3/angular-animate.min.js"></script>
+    <script src="sma/apis/resources/libs/angular-aria_1_5_3/angular-aria.min.js"></script>
+    <script src="sma/apis/resources/libs/angular-messages_1_5_3/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="sma/apis/resources/libs/angular-material_1_0_9/angular-material.min.js"></script>
+    <script src='sma/apis/webGraphics/webGraphicsApi.js'></script>
+    <script>
+	  angular.module('GraphicLoaderApp', ['ngMaterial'])
+	  .config(function($mdThemingProvider){
+
+			var greenMap = $mdThemingProvider.extendPalette('green', {
+				'500': '009530',
+				'contrastDefaultColor': 'dark'
+			});
+			$mdThemingProvider.definePalette('amazingGreen', greenMap);
+			$mdThemingProvider.theme('default').primaryPalette('amazingGreen');
+		}).controller('GraphicLoaderCtrl', ['$interval', '$scope',
+			function($interval, $scope) {
+			    $scope.state = {};
+			    var state = $scope.state;
+			    state.loading = true;
+			    state.loadingError = false;
+			    state.errorMsg = "";
+			    var symbolName = getQueryString("symbol") || "";
+			    var poolingRate = Math.max(100, parseInt(getQueryString("poolingRate")) || 500);
+			    if (symbolName == "") {
+			        state.loadingError = true;
+			        state.errorMsg = "You must specify a symbol name in the URL (e.g.: " + location.href + "?symbol=Symbol_001)"
+			    }
+			    else {
+                    
+                    // IE does not support location.origin, so we create the property.
+			        if (typeof (location.origin) === "undefined") {
+			            location.origin = location.protocol + "//" + location.hostname;
+			        }
+			        pageLocation = location.origin + location.pathname.substring(0, location.pathname.length - "/graphicLoader.html".length);
+			        var opts = {
+			            success: function () {
+			                LoadSymbol(symbolName);
+			            },
+			            failure: function (err) {
+                            state.loadingError = true;
+                            state.errorMsg = "Error to load graphics engine, please check the logger for details";
+                            $scope.$apply();
+			            },
+			            linkUrl: pageLocation,
+			            serviceUrl: location.origin + "/InTouchWeb/ChartConfigurationApi/v1/MobileAccess/Service",
+			            user: "Guest",
+			            password: "",
+                        poolingRate: poolingRate
+			        };
+			        webGraphicsApi.init(opts);
+			    }
+
+			    function LoadSymbol(symbolName) {
+			        var doOpen = webGraphicsApi.load(symbolName, 'mycontainer');
+			        doOpen.then(
+                        function (results) {
+                            state.loading = false;
+                            $scope.$apply();
+                        },
+                        function (err) {
+                            state.loadingError = true;
+                            state.errorMsg = err.message;
+                            $scope.$apply();
+                        },
+                        function (progress) {
+                            console.log(progress);
+                        }
+                    );
+			    }
+
+			    function getQueryString(name) {
+			        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+			        var r = location.search.substr(1).match(reg);
+			        if (r != null) return unescape(r[2]);
+			        return null;
+			    }
+			}
+		]);
+    </script>
+    <link rel="stylesheet" href="sma/apis/resources/libs/angular-material_1_0_9/angular-material.css">
+</head>
+
+<body ng-app="GraphicLoaderApp" ng-cloak>
+    <md-container ng-controller="GraphicLoaderCtrl" layout="row" layout-align="center" style="height:100vh">
+        <md-container layout="column" layout-align="center">
+            <md-progress-circular ng-if="state.loading && !state.loadingError" class="md-primary" md-diameter="80"></md-progress-circular>
+            <md-card  ng-if="state.loadingError">
+                {{state.errorMsg}}
+            </md-card>
+        </md-container>
+    </md-container>
+    <div id='mycontainer' ng-style="!state.loading && !state.loadingError ? {display:'block'} : {display:'none'}" style="position: absolute; top:0px; left:0px; display:none; width:100%;height:100%">
+    </div>
+</body>
+
+
+</html>

@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../resources/libs/bootstrap_3_3_7/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./build/build.min.css" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style id="dynamic-style"></style>
+    <title></title>
+  <script>
+    if ( 'serviceWorker' in navigator && window.location.href.toLowerCase().indexOf('file://') < 0) {
+      window.addEventListener( 'load', function () {
+        navigator.serviceWorker.register('sw.js');
+      });
+    }
+  </script>
+</head>
+
+<body>
+    <table id='list-box'>
+        <tbody>
+            <tr>
+                <!--This space as to be kept here-->
+                <td>&nbsp;</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class='button-bar'>
+        <div class='top-bar'>
+            <div class='up-all'>
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="18px" height="16px" viewBox="0 0 25 20" preserveAspectRatio="xMidYMid meet">
+                    <line x1="8" y1="5" x2="17" y2="5" style="stroke:rgb(0,0,0);stroke-width:3"></line>
+                    <g transform="translate(0.000000,25.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                        <path d="M102 135 l-22 -45 45 0 45 0 -21 43 c-12 23 -22 43 -23 44 -1 2 -12 -18 -24 -42z" />
+                    </g>
+                </svg>
+            </div>
+            <div class='up-page'>
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="18px" height="16px" viewBox="0 4 25 20" preserveAspectRatio="xMidYMid meet">
+                    <g transform="translate(0.000000,28.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                        <path d="M102 135 l-22 -45 45 0 45 0 -21 43 c-12 23 -22 43 -23 44 -1 2 -12 -18 -24 -42z" />
+                    </g>
+                    <g transform="translate(0.000000,23.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                        <path d="M102 135 l-22 -45 45 0 45 0 -21 43 c-12 23 -22 43 -23 44 -1 2 -12 -18 -24 -42z" />
+                    </g>
+                </svg>
+            </div>
+            <div class='up-row'>
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="18px" height="16px" viewBox="0 2 25 20" preserveAspectRatio="xMidYMid meet">
+                    <g transform="translate(0.000000,25.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                        <path d="M102 135 l-22 -45 45 0 45 0 -21 43 c-12 23 -22 43 -23 44 -1 2 -12 -18 -24 -42z" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class='bottom-bar'>
+            <div class='down-row'>
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="18px" height="16px" viewBox="0 2 25 20" preserveAspectRatio="xMidYMid meet">
+                    <g transform="translate(0.000000,25.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                        <path d="M101 118 c12 -24 22 -44 23 -45 1 -2 12 18 24 42 l22 45 -45 0 -45 0 21 -42z" />
+                    </g>
+                </svg>
+            </div>
+            <div class='down-page'>
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="18px" height="16px" viewBox="0 4 25 20" preserveAspectRatio="xMidYMid meet">
+                    <g transform="translate(0.000000,22.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                        <path d="M101 118 c12 -24 22 -44 23 -45 1 -2 12 18 24 42 l22 45 -45 0 -45 0 21 -42z" />
+                    </g>
+                    <g transform="translate(0.000000,27.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                        <path d="M101 118 c12 -24 22 -44 23 -45 1 -2 12 18 24 42 l22 45 -45 0 -45 0 21 -42z" />
+                    </g>
+                </svg>
+            </div>
+            <div class='down-all'>
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="18px" height="16px" viewBox="0 2 25 20" preserveAspectRatio="xMidYMid meet">
+                    <line x1="8" y1="18" x2="17" y2="18" style="stroke:rgb(0,0,0);stroke-width:3"></line>
+                    <g transform="translate(0.000000,23.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                        <path d="M101 118 c12 -24 22 -44 23 -45 1 -2 12 18 24 42 l22 45 -45 0 -45 0 21 -42z" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <!--The bellow lines cannot be removed-->
+    <script src="../resources/libs/jquery_3_2_1/dist/jquery.min.js"></script>
+    <script src="../resources/libs/bootstrap_3_3_7/dist/js/bootstrap.min.js"></script>
+    <script src="../resources/libs/eventEmitter_5_1_0/eventEmitter.min.js"></script>
+    <script src="../resources/apis/proxy.js" cwidget="listbox" autoResize="disable"></script>
+    <script src="./build/build.min.js"></script>
+</body>
+
+</html>

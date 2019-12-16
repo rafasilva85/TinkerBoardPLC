@@ -1,0 +1,36 @@
+﻿<svg style="position:absolute;top:0;left:0;" width="100%" height="100%" onselectstart="return false">
+    <text class="chart-title"></text>
+    <g id="chartElementGroup" transform="translate(0, 0)">
+        <g id="horizontalGrid" transform="translate(0, 0)" ng-style="{'display' : canvas.options.grid.showHorizontalLines?'block':'none'}">
+            <line class="grid hgrid y0" x1="0"
+                ng-attr-x2="{{canvas.width + canvas.margin.left - (canvas.options.multipleScales.width - 10 + 25)}}"
+                ng-style="canvas.options.grid.style"
+                ng-repeat="line in canvas.options.grid.horizontalLines track by $index"
+                ng-attr-y1="{{(canvas.height/(canvas.options.grid.horizontalLines.length - 1)) * $index}}"
+                ng-attr-y2="{{(canvas.height/(canvas.options.grid.horizontalLines.length - 1)) * $index}}">
+            </line>
+            <!-- x2 reference calculateLeftMarginValue() in chart.js -->
+        </g>
+    </g>
+    <g class="interactive-group" transform="translate(0, 0)"></g>
+    <g id="multipleScales" class="axis yaxis" transform="translate(11, 0)" ng-style="{'display' : canvas.options.multipleScales.visible?'block':'none'}">
+        <rect x="0" y="0" fill-opacity="1"
+         fill="white"
+         ng-attr-width="{{canvas.options.multipleScales.width}}px"
+         ng-attr-height="{{canvas.height + canvas.options.multipleScales.marginTop + canvas.options.multipleScales.marginBottom}}px"
+            >
+        </rect>
+        <g id="maxScale" ng-attr-transform="translate({{canvas.options.multipleScales.width}}, 0)">
+            <text style="text-anchor:end">
+                <tspan x="0" dy="13" ng-repeat="pen in canvas.options.multipleScales.visiblePens.slice().reverse()" ng-style="{'fill' : pen.Color}">{{pen.EngUnitMax}}</tspan>
+            </text>
+        </g>
+        <g id="minScale"
+            ng-attr-transform="translate({{canvas.options.multipleScales.width}},{{canvas.height - (13.2*(canvas.options.multipleScales.visiblePens.length-1))}})">
+            <text style="text-anchor:end;">
+                <tspan x="0" dy="13" ng-repeat="pen in canvas.options.multipleScales.visiblePens" ng-style="{'fill' : pen.Color}">{{pen.EngUnitMin}}</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
+<ng-transclude></ng-transclude>

@@ -1,0 +1,347 @@
+﻿{
+  "version": 0,
+  "height": 250,
+  "width": 1900,
+  "events": {},
+  "properties": {
+    "0": {
+      "name": "ColumnsCount"
+    },
+    "1": {
+      "name": "WorksheetConfigColors"
+    },
+    "2": {
+      "name": "AckColor"
+    },
+    "3": {
+      "name": "AckComment"
+    },
+    "4": {
+      "name": "ActiveColor"
+    },
+    "5": {
+      "name": "NormColor"
+    },
+    "6": {
+      "name": "BackgroundColor"
+    },
+    "7": {
+      "name": "AckTrigger"
+    },
+    "8": {
+      "name": "FontColor"
+    },
+    "9": {
+      "name": "FontName"
+    },
+    "10": {
+      "name": "FontSizeInPoints"
+    },
+    "11": {
+      "name": "FontStyle"
+    },
+    "12": {
+      "name": "QueryResults"
+    },
+    "13": {
+      "name": "ShowHeader"
+    },
+    "14": {
+      "name": "ColumnLabel",
+      "type": "array"
+    },
+    "15": {
+      "name": "ColumnField",
+      "type": "array"
+    },
+    "16": {
+      "name": "ColumnWidth",
+      "type": "array"
+    },
+    "17": {
+      "name": "ColumnAlign",
+      "type": "array"
+    },
+    "18": {
+      "name": "Type"
+    },
+    "19": {
+      "name": "ShowGridLines"
+    },
+    "20": {
+      "name": "FilterGroup"
+    },
+    "21": {
+      "name": "FilterSelection"
+    },
+    "22": {
+      "name": "FilterPriorityFrom"
+    },
+    "23": {
+      "name": "FilterPriorityTo"
+    },
+    "24": {
+      "name": "FilterType"
+    },
+    "25": {
+      "name": "FilterState"
+    },
+    "26": {
+      "name": "FilterTagName"
+    },
+    "27": {
+      "name": "FilterMessage"
+    },
+    "28": {
+      "name": "FilterUsername"
+    },
+    "29": {
+      "name": "Day"
+    },
+    "30": {
+      "name": "Month"
+    },
+    "31": {
+      "name": "Year"
+    },
+    "32": {
+      "name": "Hour"
+    },
+    "33": {
+      "name": "Minute"
+    },
+    "34": {
+      "name": "Second"
+    },
+    "35": {
+      "name": "MS"
+    },
+    "36": {
+      "name": "RequireConfirmation"
+    },
+    "37": {
+      "name": "DisableAckOnDoubleClick"
+    },
+    "38": {
+      "name": "TotalItems"
+    },
+    "39": {
+      "name": "SelectedTag"
+    },
+    "40": {
+      "name": "FirstRowText"
+    },
+    "41": {
+      "name": "SelectedRowText"
+    },
+    "42": {
+      "name": "SummaryChanges"
+    },
+    "43": {
+      "name": "ShowAlarmState"
+    },
+    "44": {
+      "name": "TimeZoneType"
+    },
+    "45": {
+      "name": "AckAllTrigger"
+    },
+    "46": {
+      "name": "Security"
+    },
+    "47": {
+      "name": "GridLineColor"
+    },
+    "48": {
+      "name": "EventFontColor"
+    },
+    "49": {
+      "name": "EventBGColor"
+    },
+    "50": {
+      "name": "AlarmRTNFontColor"
+    },
+    "51": {
+      "name": "AlarmRTNBGColor"
+    },
+    "52": {
+      "name": "HeadingFontColor"
+    },
+    "53": {
+      "name": "HeadingBGColor"
+    },
+    "54": {
+      "name": "ShelveFontColor"
+    },
+    "55": {
+      "name": "ShelveBGColor"
+    },
+    "56": {
+      "name": "Engine"
+    },
+    "57": {
+      "name": "AckColorBGColorHiHi"
+    },
+    "58": {
+      "name": "AckColorInfoFontColorHiHi"
+    },
+    "59": {
+      "name": "AckColorBGColorHi"
+    },
+    "60": {
+      "name": "AckColorInfoFontColorHi"
+    },
+    "61": {
+      "name": "AckColorBGColorLo"
+    },
+    "62": {
+      "name": "AckColorInfoFontColorLo"
+    },
+    "63": {
+      "name": "AckColorBGColorLoLo"
+    },
+    "64": {
+      "name": "AckColorInfoFontColorLoLo"
+    },
+    "65": {
+      "name": "UNAckColorBGColorHiHi"
+    },
+    "66": {
+      "name": "UNAckColorInfoFontColorHiHi"
+    },
+    "67": {
+      "name": "UNAckColorBGColorHi"
+    },
+    "68": {
+      "name": "UNAckColorInfoFontColorHi"
+    },
+    "69": {
+      "name": "UNAckColorBGColorLo"
+    },
+    "70": {
+      "name": "UNAckColorInfoFontColorLo"
+    },
+    "71": {
+      "name": "UNAckColorBGColorLoLo"
+    },
+    "72": {
+      "name": "UNAckColorInfoFontColorLoLo"
+    },
+    "73": {
+      "name": "AckColorFromPriorityHiHi"
+    },
+    "74": {
+      "name": "AckColorToPriorityHiHi"
+    },
+    "75": {
+      "name": "AckColorFromPriorityHi"
+    },
+    "76": {
+      "name": "AckColorToPriorityHi"
+    },
+    "77": {
+      "name": "AckColorFromPriorityLo"
+    },
+    "78": {
+      "name": "AckColorToPriorityLo"
+    },
+    "79": {
+      "name": "AckColorFromPriorityLoLo"
+    },
+    "80": {
+      "name": "AckColorToPriorityLoLo"
+    },
+    "81": {
+      "name": "UNAckColorFromPriorityHiHi"
+    },
+    "82": {
+      "name": "UNAckColorToPriorityHiHi"
+    },
+    "83": {
+      "name": "UNAckColorFromPriorityHi"
+    },
+    "84": {
+      "name": "UNAckColorToPriorityHi"
+    },
+    "85": {
+      "name": "UNAckColorFromPriorityLo"
+    },
+    "86": {
+      "name": "UNAckColorToPriorityLo"
+    },
+    "87": {
+      "name": "UNAckColorFromPriorityLoLo"
+    },
+    "88": {
+      "name": "UNAckColorToPriorityLoLo"
+    },
+    "89": {
+      "name": "FlashUnackAlarms"
+    },
+    "90": {
+      "name": "FlashUnackColorBGColorHiHi"
+    },
+    "91": {
+      "name": "FlashUnackColorInfoFontColorHiHi"
+    },
+    "92": {
+      "name": "FlashUnackColorBGColorHi"
+    },
+    "93": {
+      "name": "FlashUnackColorInfoFontColorHi"
+    },
+    "94": {
+      "name": "FlashUnackColorBGColorLo"
+    },
+    "95": {
+      "name": "FlashUnackColorInfoFontColorLo"
+    },
+    "96": {
+      "name": "FlashUnackColorBGColorLoLo"
+    },
+    "97": {
+      "name": "FlashUnackColorInfoFontColorLoLo"
+    },
+    "98": {
+      "name": "FlashUnackColorFromPriorityHiHi"
+    },
+    "99": {
+      "name": "FlashUnackColorToPriorityHiHi"
+    },
+    "100": {
+      "name": "FlashUnackColorFromPriorityHi"
+    },
+    "101": {
+      "name": "FlashUnackColorToPriorityHi"
+    },
+    "102": {
+      "name": "FlashUnackColorFromPriorityLo"
+    },
+    "103": {
+      "name": "FlashUnackColorToPriorityLo"
+    },
+    "104": {
+      "name": "FlashUnackColorFromPriorityLoLo"
+    },
+    "105": {
+      "name": "FlashUnackColorToPriorityLoLo"
+    },
+    "106": {
+      "name": "AlarmDataLocator"
+    },
+    "107": {
+      "name": "FilterAllowSort"
+    },
+    "108": {
+      "name": "SortInfoField",
+      "type": "array"
+    },
+    "109": {
+      "name": "SortInfoAscending",
+      "type": "array"
+    },
+    "110": {
+      "name": "ESign"
+    }
+  }
+}

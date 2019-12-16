@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../resources/libs/dgrid/css/dgrid.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/libs/bootstrap_3_3_7/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./build/build.min.css" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style id='dynamic-style'></style>
+    <title>Grid Control</title>
+  <script>
+    if ( 'serviceWorker' in navigator && window.location.href.toLowerCase().indexOf('file://') < 0) {
+      window.addEventListener( 'load', function () {
+        navigator.serviceWorker.register('sw.js');
+      });
+    }
+  </script>
+</head>
+
+<body>
+    <div class='grid-container with-scroll'>
+        <div id='grid'></div>
+    </div>
+
+    <!--The bellow lines cannot be removed-->
+    <script src="../resources/libs/jquery_3_2_1/dist/jquery.min.js"></script>
+    <script src="../resources/libs/bootstrap_3_3_7/dist/js/bootstrap.min.js"></script>
+    <script src="../resources/libs/moment_2_19_1/min/moment.min.js"></script>
+    <script src="../resources/apis/proxy.js" cwidget="grid" autoResize="disable"></script>
+    <script src="./build/dgrid.js" data-dojo-config='async: false'></script>
+    <script src="./build/build.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+{
+    "version": 0,
+    "height": 90,
+    "width": 400,
+    "events": {},
+    "properties": {
+        "1": {
+            "name": "ReadTagExpression"
+        },
+        "2": {
+            "name": "HideBorder"
+        },
+        "3": {
+            "name": "BorderWeight"
+        },
+        "6": {
+            "name": "Align"
+        },
+        "7": {
+            "name": "FontName"
+        },
+        "8": {
+            "name": "FontStyle"
+        },
+        "9": {
+            "name": "FontSizeInPoints"
+        },
+        "10": {
+            "name": "MessagesCount"
+        },
+        "11": {
+            "name": "MessageState",
+            "type": "array"
+        },
+        "12": {
+            "name": "MessageText",
+            "type": "array"
+        },
+        "13": {
+            "name": "MessageValue",
+            "type": "array"
+        },
+        "14": {
+            "name": "MessageTextFG",
+            "type": "array"
+        },
+        "15": {
+            "name": "MessageTextBG",
+            "type": "array"
+        },
+        "16": {
+            "name": "MessageTextBlink",
+            "type": "array"
+        },
+        "17": {
+            "name": "MessageRecFG",
+            "type": "array"
+        },
+        "18": {
+            "name": "MessageRecBG",
+            "type": "array"
+        },
+        "19": {
+            "name": "MessageRecBlink",
+            "type": "array"
+        },
+        "20": {
+            "name": "Width"
+        },
+        "21": {
+            "name": "Height"
+        }
+    }
+}

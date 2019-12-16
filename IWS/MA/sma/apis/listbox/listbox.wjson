@@ -1,0 +1,84 @@
+{
+    "version": 0,
+    "height": 150,
+    "width": 800,
+    "events": {},
+    "properties": {
+        "0": {
+            "name": "ValueType"
+        },
+        "1": {
+            "name": "UserEnable"
+        },
+        "2": {
+            "name": "ControlEnable"
+        },
+        "3": {
+            "name": "ReadSearchTag"
+        },
+        "4": {
+            "name": "WriteTag"
+        },
+        "5": {
+            "name": "ScrollbarRow"
+        },
+        "6": {
+            "name": "ScrollbarPage"
+        },
+        "7": {
+            "name": "ScrollbarStartEnd"
+        },
+        "8": {
+            "name": "ScrollbarListWrap"
+        },
+        "9": {
+            "name": "ColorsHighlight"
+        },
+        "10": {
+            "name": "ColorsText"
+        },
+        "11": {
+            "name": "ColorsBackground"
+        },
+        "12": {
+            "name": "ColorsBorder"
+        },
+        "13": {
+            "name": "RequireEnterForSelection"
+        },
+        "15": {
+            "name": "FontName"
+        },
+        "16": {
+            "name": "FontSizeInPoints"
+        },
+        "17": {
+            "name": "FontStyle"
+        },
+        "18": {
+            "name": "MessagesAutoFormat"
+        },
+        "19": {
+            "name": "MessagesCount"
+        },
+        "20": {
+            "name": "MessageText",
+            "type": "array"
+        },
+        "21": {
+            "name": "MessageValue",
+            "type": "array"
+        },
+        "22": {
+            "name": "MessageTextFG",
+            "type": "array"
+        },
+        "23": {
+            "name": "MessageTextBlink",
+            "type": "array"
+        },
+         "24": {
+            "name": "ESign"
+        }
+    }
+}

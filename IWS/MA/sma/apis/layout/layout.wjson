@@ -1,0 +1,14 @@
+﻿{
+  "version": 0,
+  "height": 250,
+  "width": 1900,
+  "events": {},
+  "properties": {
+    "0": {
+      "name": "LayoutTemplate"
+    },
+    "1": {
+      "name": "SymbolsAssociation"
+    }
+  }
+}

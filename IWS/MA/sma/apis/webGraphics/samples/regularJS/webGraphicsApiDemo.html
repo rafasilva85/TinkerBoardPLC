@@ -1,0 +1,49 @@
+﻿<html>
+
+<head>
+    <script>
+        window.onload = function () {
+            serverUrl = location.toString();
+            serverUrl = serverUrl.substr(0, serverUrl.length - location.pathname.length);
+            var opts = {
+                success: function () {
+                    var b = document.getElementsByTagName("Button")[0];
+                    b.disabled = false;
+                },
+                fail: function (err) {
+                    console.log(err);
+                },
+                linkUrl: serverUrl + "/MA",
+                serviceUrl: serverUrl + "/MA/service",
+                user: "Guest",
+                password: "",
+                isDebug: true,
+            };
+            webGraphicsApi.init(opts);
+        };
+
+		function TrggerOpenScreen(){
+		    var doOpen  = webGraphicsApi.load('SA_BarChart', 'mycontainer');
+			doOpen.then(
+				function(results){
+					console.log(results);
+				},
+				function(err){
+					console.log(err);
+				},
+				function(progress){
+					console.log(progress);
+				}
+			);
+		}
+
+    </script>
+</head>
+
+<body>
+    <button onclick="TrggerOpenScreen();" disabled="disabled">OpenScreen</button>
+    <div id='mycontainer' style="position: absolute;width:500px;height:200px"></div>
+    <script src='../../webGraphicsApi.js'></script>
+</body>
+
+</html>

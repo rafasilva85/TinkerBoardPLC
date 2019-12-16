@@ -1,0 +1,26 @@
+body {
+    overflow: inherit;
+    min-height: inherit;
+    min-width: inherit;
+    max-height: inherit;
+    max-width: inherit;
+    display: inherit;
+}
+
+#_x_view_logon {
+    display: none;
+}
+
+.mblBackground {
+    background-color: inherit;
+}
+
+.mobile body {
+    overflow-x: revert;
+    -webkit-text-size-adjust: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    width: inherit;
+    margin: inherit;
+    padding: inherit;
+}

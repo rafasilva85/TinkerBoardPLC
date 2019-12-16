@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../resources/libs/bootstrap_3_4_1/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./depends/kendo/css/kendo.common-material.min.css" />
+    <link rel="stylesheet" type="text/css" href="./depends/kendo/css/kendo.material.min.css" />
+    <link rel="stylesheet" type="text/css" href="./build/build.min.css" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style id='dynamic-style'></style>
+    <title></title>
+  <script>
+    if ( 'serviceWorker' in navigator && window.location.href.toLowerCase().indexOf('file://') < 0) {
+      window.addEventListener( 'load', function () {
+        navigator.serviceWorker.register('sw.js');
+      });
+    }
+  </script>
+</head>
+<body>
+    <div class='layout-container'>
+        <div id="ngLayout">
+
+        </div>
+    </div>
+
+    <!--The bellow lines cannot be removed-->
+    <script src="../resources/libs/jquery_3_4_0/dist/jquery.min.js"></script>
+    <script src="../resources/libs/bootstrap_3_4_1/dist/js/bootstrap.min.js"></script>
+    <script src="../resources/apis/proxy.js" cwidget="layout" autoResize="disable"></script>
+    <script src="../resources/apis/MASvrHelper.js"></script>
+    <script src="./depends/kendo/js/kendo.all.min.js"></script>
+    <script src='../webGraphics/PanAndZoomSupport.js'></script>
+    <script src="./build/build.min.js"></script>
+</body>
+</html>

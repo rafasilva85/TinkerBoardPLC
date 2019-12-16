@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../resources/libs/bootstrap_3_3_7/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./build/build.min.css" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style id='msg-style'></style>
+    <title></title>
+  <script>
+    if ( 'serviceWorker' in navigator && window.location.href.toLowerCase().indexOf('file://') < 0) {
+      window.addEventListener( 'load', function () {
+        navigator.serviceWorker.register('sw.js');
+      });
+    }
+  </script>
+</head>
+
+<body>
+    <div class='msg-rec'>
+        <div class='msg-text-container'>
+            <span class='msg-text'>Message</span>
+        </div>
+    </div>
+
+    <!--The bellow lines cannot be removed-->
+    <script src="../resources/libs/jquery_3_2_1/dist/jquery.min.js"></script>
+    <script src="../resources/libs/bootstrap_3_3_7/dist/js/bootstrap.min.js"></script>
+    <script src="../resources/apis/proxy.js"  cwidget="smartmessage" autoResize="disable"></script>
+    <script src="./build/build.min.js"></script>
+</body>
+
+</html>

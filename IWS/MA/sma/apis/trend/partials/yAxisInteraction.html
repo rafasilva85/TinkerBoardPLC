@@ -1,0 +1,20 @@
+﻿<div id="horizantalInteractiveArea" ng-show="canvas.options.axes[1].enableInteractiveArea === true && canvas.options.axes[0].type === 'MULTI'" class="yaxis-interactive-area"
+     ng-style="{'margin-left': canvas.margin.left + 'px', canvas: chart.width + 'px', height: canvas.margin.top + 'px'}">
+</div>
+<div id="verticalInteractiveArea" class="yaxis-interactive-area" ng-show="canvas.options.axes[0].enableInteractiveArea === true && canvas.options.axes[0].type !== 'MULTI'"
+     ng-style="{'margin-top': (canvas.margin.top) + 'px', 'width': (canvas.margin.left) + 'px', 'height' : (canvas.height) + 'px'}">
+</div>
+<div id="verticalInteractiveArea" class="yaxis-interactive-area" ng-show="canvas.options.axes[0].enableInteractiveArea === true && canvas.options.axes[0].type === 'MULTI'"
+     ng-style="{'margin-top': '0px', 'width': (canvas.margin.left) + 'px', 'height' : (canvas.height) + 'px'}">
+</div>
+<div id="chart-menu-curtain" flex>
+</div>
+<md-card id="chart-menu" flex layout-padding>
+    <md-radio-group ng-model="canvas.options.axes[0].type" style="padding-bottom:0" ng-change="canvas.update(true)">
+        <md-radio-button value="SINGLE" class="md-primary">Single Axis</md-radio-button>
+        <md-radio-button value="MULTI">Multi Axis</md-radio-button>
+        <md-radio-button value="STACKED">Stacked Axis</md-radio-button>
+    </md-radio-group>
+    <hr style="margin:0;padding:0;" />
+    <md-checkbox aria-label="Auto Scale" ng-model="canvas.options.axes[0].useDataAlone" style="margin-bottom:0; margin-left: 8px;" ng-change="canvas.update(true)">Auto Scale</md-checkbox>
+</md-card>

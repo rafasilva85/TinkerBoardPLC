@@ -1,0 +1,36 @@
+﻿<div layout="row" layout-align="center center" 
+     ng-style="{'top': (canvas.margin.top + canvas.height) + 'px'}"
+     class="chart-controls-area" ng-if="canvas.options.d3PanAndZoom.pan.enable == true && canvas.options.d3PanAndZoom.zoom.enable == true">
+    <div layout="row">
+        <div layout="row" class="pan-and-zoom-area">
+            <md-button class="md-icon-button expand-left">
+                <md-tooltip md-direction="bottom" md-autohide="true">Expand Left</md-tooltip>
+                <md-icon md-svg-src="img/ic-chartcontrol-expand-left.svg" class="mdIconMenuStyle "></md-icon>
+            </md-button>
+            <md-button class="md-icon-button pan-left">
+                <md-tooltip md-direction="bottom" md-autohide="true">Pan Left</md-tooltip>
+                <md-icon md-svg-src="img/ic-chartcontrol-pan-left.svg" class="mdIconMenuStyle "></md-icon>
+            </md-button>
+            <md-button class="md-icon-button zoom-out">
+                <md-tooltip md-direction="bottom" md-autohide="true">Zoom out</md-tooltip>
+                <md-icon md-svg-src="img/ic-chartcontrol-zoom-out.svg" class="mdIconMenuStyle "></md-icon>
+            </md-button>
+            <md-button class="md-icon-button zoom">
+                <md-tooltip md-direction="bottom" md-autohide="true">Zoom</md-tooltip>
+                <md-icon md-svg-src="img/ic-chartcontrol-zoom-region.svg" class="mdIconMenuStyle "></md-icon>
+            </md-button>
+            <md-button class="md-icon-button zoom-in">
+                <md-tooltip md-direction="bottom" md-autohide="true">Zoom in</md-tooltip>
+                <md-icon md-svg-src="img/ic-chartcontrol-zoom-in.svg" class="mdIconMenuStyle "></md-icon>
+            </md-button>
+            <md-button class="md-icon-button pan-right">
+                <md-tooltip md-direction="bottom" md-autohide="true">Pan Right</md-tooltip>
+                <md-icon md-svg-src="img/ic-chartcontrol-pan-right.svg" class="mdIconMenuStyle "></md-icon>
+            </md-button>
+            <md-button class="md-icon-button expand-right">
+                <md-tooltip md-direction="bottom" md-autohide="true">Expand Right</md-tooltip>
+                <md-icon md-svg-src="img/ic-chartcontrol-expand-right.svg" class="mdIconMenuStyle "></md-icon>
+            </md-button>
+        </div>
+    </div>
+</div>

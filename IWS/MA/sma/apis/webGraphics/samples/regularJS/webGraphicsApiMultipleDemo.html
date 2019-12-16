@@ -1,0 +1,47 @@
+﻿<html>
+
+<head>
+    <script>
+        window.onload = function () {
+            var opts = {
+                success: function () {
+                    var b = document.getElementsByTagName("Button")[0];
+                    b.disabled = false;
+                },
+                fail: function (err) {
+                    console.log(err);
+                },
+                linkUrl: "http://localhost:8080/MA",
+                serviceUrl: "http://localhost:8080/cgi-bin/WebCGIProc.exe",
+                user: "Guest",
+                password: "",
+                isDebug: true
+            };
+            webGraphicsApi.init(opts);
+        };
+
+		function TrggerOpenScreen(){
+		    var doOpen = webGraphicsApi.load('screen6', 'mycontainer');
+			doOpen.then(
+				function(results){
+					console.log(results);
+				},
+				function(err){
+					console.log(err);
+				},
+				function(progress){
+					console.log(progress);
+				}
+			);
+		}
+
+    </script>
+</head>
+
+<body>
+    <button onclick="TrggerOpenScreen();" disabled="disabled">OpenScreen</button>
+    <div id='mycontainer' style="position: absolute;width:500px;height:200px"></div>
+    <script src='../../webGraphicsApi.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+﻿{
+  "version": 0,
+  "height": 250,
+  "width": 1900,
+  "events": {
+    "0": {
+      "name": "onAllScreensLoaded"
+    }
+  },
+  "properties": {
+    "0": {
+      "name": "ScreenGroups"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../resources/libs/dgrid/css/dgrid.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/libs/bootstrap_3_4_1/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="./build/build.min.css" />
+	<link rel="icon" type="image/png" href="favicon.png">
+    <style id='dynamic-style'></style>
+    <title></title>
+  <script>
+    if ( 'serviceWorker' in navigator && window.location.href.toLowerCase().indexOf('file://') < 0) {
+      window.addEventListener( 'load', function () {
+        navigator.serviceWorker.register('sw.js');
+      });
+    }
+  </script>
+</head>
+<body>
+    <div class='alarm-container with-scroll'>
+        <div id='alarm'></div>
+    </div>
+
+    <!--The bellow lines cannot be removed-->
+    <script src="../resources/libs/jquery_3_4_0/dist/jquery.min.js"></script>
+    <script src="../resources/libs/bootstrap_3_4_1/dist/js/bootstrap.min.js"></script>
+    <script src="../resources/libs/eventEmitter_5_1_0/eventEmitter.min.js"></script>
+    <script src="../resources/libs/moment_2_19_3/min/moment.min.js"></script>
+    <script src="../resources/apis/proxy.js" cwidget="alarm" autoResize="disable"></script>
+    <script src="./build/dgrid.js" data-dojo-config='async: false'></script>
+    <script src="./build/build.min.js"></script>
+</body>
+</html>

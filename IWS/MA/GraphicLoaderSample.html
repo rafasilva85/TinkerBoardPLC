@@ -1,0 +1,71 @@
+﻿<html>
+
+<head>
+    <script src="sma/apis/resources/libs/angular_1_3_15/angular.min.js"></script>
+    <script src="sma/apis/resources/libs/angular-animate_1_5_3/angular-animate.min.js"></script>
+    <script src="sma/apis/resources/libs/angular-aria_1_5_3/angular-aria.min.js"></script>
+    <script src="sma/apis/resources/libs/angular-messages_1_5_3/angular-messages.min.js"></script>
+    <!-- Angular Material Library -->
+    <script src="sma/apis/resources/libs/angular-material_1_0_9/angular-material.min.js"></script>
+    <script src='sma/apis/webGraphics/webGraphicsApi.js'></script>
+
+    <script>
+        angular.module('graphicLoaderSampleApp', ['ngMaterial']).
+            controller('graphicLoaderCtrl', function ($scope) {
+                $scope.hostname = "localhost";
+                $scope.frame1 = "abobora";
+                var loadFrame = function (symbol)
+                {
+                    var iframe = document.getElementById(symbol);
+                    iframe.src = "http://" + $scope.hostname + "/InTouchWeb/ma/GraphicLoader.html?symbol=" + symbol;
+                }
+                $scope.load = function ()
+                {
+                    loadFrame("ClockDigital12")
+                    loadFrame("AnalogMeterTach")
+                    loadFrame("AnalogMeterVert")
+                    loadFrame("AnalogMeterGaugeBlack")
+                }
+        });
+    </script>
+    <link rel="stylesheet" href="sma/apis/resources/libs/angular-material_1_0_9/angular-material.css">
+    <style>
+        iframe {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body ng-app="graphicLoaderSampleApp" ng-cloak>
+    <md-container ng-controller="graphicLoaderCtrl" layout="column" style="height:100vh">
+        <md-container layout="row" layout-align="center">
+            <md-input-container flex="30">
+                <label>InTouch Host</label>
+                <input ng-model="hostname">
+            </md-input-container>
+            <md-button class="md-raised" style='Height: 44px' ng-click="load()">Load</md-button>
+        </md-container>
+        <md-container layout="column" style="Height:100%">
+            <md-container style="Height:100%" layout="row" layout-align="center" layout-margin="10" layout-md>
+                <md-card flex="50">
+                    <iframe id="ClockDigital12" scrolling="no" frameborder="0" style="position:relative;top:0px;width:100%;height:100%;"></iframe>
+                </md-card>
+                <md-card flex="50">
+                    <iframe id="AnalogMeterTach" scrolling="no" frameborder="0" style="position:relative;top:0px;width:100%;height:100%;"></iframe>
+                </md-card>
+            </md-container>
+            <md-container style="Height:100%" layout="row" layout-align="center" layout-margin="10" layout-md>
+                <md-card flex="50">
+                    <iframe id="AnalogMeterVert" scrolling="no" frameborder="0" style="position:relative;top:0px;width:100%;height:100%;"></iframe>
+                </md-card>
+                <md-card flex="50">
+                    <iframe id="AnalogMeterGaugeBlack" scrolling="no" frameborder="0" style="position:relative;top:0px;width:100%;height:100%;"></iframe>
+                </md-card>
+            </md-container>
+        </md-container>
+    </md-container>
+</body>
+
+</html>

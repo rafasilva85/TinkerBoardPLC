@@ -1,0 +1,14 @@
+*{margin:0;padding: 0;}
+
+.dateTime{font-size: 12px;}
+.dateTime .d-con{margin-left:50px; margin-top:20px;}
+.d-con .d-time{display: inline-block;margin-right:20px; margin-left:50px; margin-top:10px;}
+.d-time span{}
+.d-time div{position: relative;width:60px;}
+.d-time div.d-year{width:100px;}
+.d-time div.d-year input{width:80px;}
+.d-time div input{width: 40px;height:40px;line-height:40px;font-size: 30px;}
+.d-time div .d-up{position:absolute;display:block;top:0;right:-1px;z-index:1;width:20px;height:20px;border:1px #a1a1a1 solid;cursor:pointer;background: #fff url(../../../imgs/up.png) no-repeat center center;}
+.d-time div .d-down{position:absolute;bottom:0;right:-1px;z-index:1;width:20px;height:20px;cursor:pointer;border:1px #a1a1a1 solid;background: #fff url(../../../imgs/down.png) no-repeat center center;}
+.d-content { margin-left:20px; margin-top:20px;font-weight:bold}
+.d-hr { margin-top:30px; margin-left:20px; width:405px;}

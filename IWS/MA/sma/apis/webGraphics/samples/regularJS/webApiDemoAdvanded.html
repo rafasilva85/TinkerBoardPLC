@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>WebGraphicsApi test demo for regular JS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <script>
+        window.onload = function () {
+			//opts = {url:"http://localhost:55601/MA", user: "Guest", password:"", isDebug: true};
+            webGraphicsApi.init();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>WebGraphicsApi test demo for regular JS</h2>
+        <ul id="myTab" class="nav nav-tabs">
+            <li class="active">
+                <a href="#SA_BarChart" data-toggle="tab">
+                    SA_BarChart
+                </a>
+            </li>
+            <li>
+                <a href="#SA_BulletGraph" data-toggle="tab">SA_BulletGraph</a>
+            </li>
+            <li>
+                <a href="#SA_BoxChart" data-toggle="tab">SA_BoxChart</a>
+            </li>
+            <li>
+                <a href="#SA_PieChart" data-toggle="tab">SA_PieChart</a>
+            </li>
+            <li>
+                <a href="#SA_ColumnChart" data-toggle="tab">SA_ColumnChart</a>
+            </li>
+            <li>
+                <a href="#SA_ColumnChart_Trips" data-toggle="tab">SA_ColumnChart_Trips</a>
+            </li>
+        </ul>
+
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade in active" id="SA_BarChart">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <button onclick="webGraphicsApi.openScreen('SA_BarChart', 'mycontainer1');">Open SA_BarChart</button>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="width:300px;height:400px">
+                                    <div id='mycontainer1' style="position: absolute;width:auto;height:auto"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="SA_BulletGraph">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <button onclick="webGraphicsApi.openScreen('SA_BulletGraph', 'mycontainer2');">Open SA_BulletGraph</button>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="width:300px;height:400px">
+                                    <div id='mycontainer2' style="position: absolute;width:auto;height:auto"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="SA_BoxChart">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <button onclick="webGraphicsApi.openScreen('SA_BoxChart', 'mycontainer3');">Open SA_BoxChart</button>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="width:300px;height:400px">
+                                    <div id='mycontainer3' style="position: absolute;width:auto;height:auto"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="SA_PieChart">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <button onclick="webGraphicsApi.openScreen('SA_PieChart', 'mycontainer4');">Open SA_PieChart</button>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="width:300px;height:400px">
+                                    <div id='mycontainer4' style="position: absolute;width:auto;height:auto"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="SA_ColumnChart">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <button onclick="webGraphicsApi.openScreen('SA_ColumnChart', 'mycontainer5');">Open SA_ColumnChart</button>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="width:300px;height:400px">
+                                    <div id='mycontainer5' style="position: absolute;width:auto;height:auto"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="SA_ColumnChart_Trips">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <button onclick="webGraphicsApi.openScreen('SA_ColumnChart_Trips', 'mycontainer6');">Open SA_ColumnChart_Trips</button>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="width:300px;height:400px">
+                                    <div id='mycontainer6' style="position: absolute;width:auto;height:auto"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://apps.bdimg.com/libs/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <script src='../../webGraphicsApi.js'></script>
+</body>
+
+</html>

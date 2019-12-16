@@ -1,0 +1,104 @@
+{
+    "version": 0,
+    "height": 100,
+    "width": 151,
+    "events": {},
+    "properties": {
+        "0": {
+            "name": "Type"
+        },
+        "1": {
+            "name": "State"
+        },
+        "2": {
+            "name": "TagExpression"
+        },
+        "3": {
+            "name": "Indicator"
+        },
+        "4": {
+            "name": "Disable"
+        },
+        "5": {
+            "name": "Reset"
+        },
+        "6": {
+            "name": "Style"
+        },
+        "7": {
+            "name": "Effect"
+        },
+        "8": {
+            "name": "Align"
+        },
+        "9": {
+            "name": "ButtonColor"
+        },
+        "10": {
+            "name": "LegendPlateColor"
+        },
+        "11": {
+            "name": "OpenColor"
+        },
+        "12": {
+            "name": "OpenBlink"
+        },
+        "13": {
+            "name": "OpenCaption"
+        },
+        "14": {
+            "name": "OpenFontColor"
+        },
+        "15": {
+            "name": "OpenFontName"
+        },
+        "16": {
+            "name": "OpenFontSizeInPoints"
+        },
+        "17": {
+            "name": "OpenFontStyle"
+        },
+        "18": {
+            "name": "OpenTextBlink"
+        },
+        "19": {
+            "name": "OpenWriteValue"
+        },
+        "20": {
+            "name": "CloseColor"
+        },
+        "21": {
+            "name": "CloseBlink"
+        },
+        "22": {
+            "name": "CloseCaption"
+        },
+        "23": {
+            "name": "CloseFontColor"
+        },
+        "24": {
+            "name": "CloseFontName"
+        },
+        "25": {
+            "name": "CloseFontSizeInPoints"
+        },
+        "26": {
+            "name": "CloseFontStyle"
+        },
+        "27": {
+            "name": "CloseTextBlink"
+        },
+        "28": {
+            "name": "CloseWriteValue"
+        },
+        "29": {
+            "name": "Security"
+        },
+        "30": {
+            "name": "AutoFormat"
+        },
+        "31": {
+            "name": "ESign"
+        }
+    }
+}

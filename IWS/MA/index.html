@@ -1,0 +1,26 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=edge" />
+
+    <link rel="stylesheet" type="text/css" href="imgs/fonts/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="sma/rc/style/sma.css" />
+    <link rel="stylesheet" type="text/css" href="sma/rc/style/viewer.css" />
+    <link rel="icon" sizes="192x192" href="logo.png" />
+    <title>Mobile Access</title>
+</head>
+<body class="claro" style="overflow:hidden;position:fixed;background-color:RGB(171,171,171)" oncontextmenu="return false;" id="bodyContainer">
+    <canvas id="_textMetrics" class="viewer-style-common-textTest"></canvas>
+    <script src="sma/config.js"></script>
+    <script type="text/javascript" src="sma/services/Services.js"></script>
+    <script type="text/javascript" src="sma/def.js"></script>
+    <script type="text/javascript" src="sma/app_99_19_12_12_1.js"></script>
+    <script type="text/javascript">
+      setTimeout(function(){
+        require(["dojo/ready", "dojox/mobile/_compat", "viewer", "ma"], function () { });
+      }, 0);
+    </script>
+</body>
+</html>

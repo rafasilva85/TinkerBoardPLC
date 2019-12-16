@@ -24,32 +24,32 @@ volatile MQTTClient_deliveryToken deliveredtoken;
 
 void switchrl(char relay)
 {
-	
+	printf("Acionado relay:%c", relay);
 	switch(relay)
 	{
 	  case '0':
         digitalWrite(RELAY0, !digitalRead(RELAY0));	
         break;
 	  case '1':
-        digitalWrite(RELAY1, !digitalRead(RELAY0));	
+        digitalWrite(RELAY1, !digitalRead(RELAY1));	
 		break;
 	  case '2':
-        digitalWrite(RELAY2, !digitalRead(RELAY0));	
+        digitalWrite(RELAY2, !digitalRead(RELAY2));	
 		break;
     case '3':
-        digitalWrite(RELAY3, !digitalRead(RELAY0));	
+        digitalWrite(RELAY3, !digitalRead(RELAY3));	
 		break;
 	  case '4':
-        digitalWrite(RELAY4, !digitalRead(RELAY0));	
+        digitalWrite(RELAY4, !digitalRead(RELAY4));	
 		break;
 	  case '5':
-        digitalWrite(RELAY5, !digitalRead(RELAY0));	
+        digitalWrite(RELAY5, !digitalRead(RELAY5));	
 		break;
 	  case '6':
-        digitalWrite(RELAY6, !digitalRead(RELAY0));	
+        digitalWrite(RELAY6, !digitalRead(RELAY6));	
 		break;
 	  case '7':
-        digitalWrite(RELAY7, !digitalRead(RELAY0));	
+        digitalWrite(RELAY7, !digitalRead(RELAY7));	
 		break;
 	}
 }

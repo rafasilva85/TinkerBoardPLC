@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>ic-chartcontrol-zoom-REGION</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Chart-Interactivity-Controls" transform="translate(-236.000000, -915.000000)">
+            <g id="controls-V-4" transform="translate(80.000000, 904.000000)">
+                <g id="ic-chartcontrol-zoom-region" transform="translate(156.000000, 12.000000)">
+                    <rect id="shape" x="0" y="0" width="24" height="24"></rect>
+                    <path d="M17.5237295,16.9462873 L17.2960058,16.7266966 C18.0930387,15.7995359 18.572885,14.5958536 18.572885,13.2864425 C18.572885,10.3666996 16.2061853,8 13.2864425,8 C10.3666996,8 8,10.3666996 8,13.2864425 C8,16.2061853 10.3666996,18.572885 13.2864425,18.572885 C14.5958536,18.572885 15.7995359,18.0930387 16.7266966,17.2960058 L16.9462873,17.5237295 L16.9462873,18.1662356 L19.8790085,21.0127815 L21,19.9001347 L18.1662356,16.9462873 L17.5237295,16.9462873 Z M13.2864425,16.9462873 C11.2613284,16.9462873 9.62659769,15.3115566 9.62659769,13.2864425 C9.62659769,11.2613284 11.2613284,9.62659769 13.2864425,9.62659769 C15.3115566,9.62659769 16.9462873,11.2613284 16.9462873,13.2864425 C16.9462873,15.3115566 15.3115566,16.9462873 13.2864425,16.9462873 Z" id="Shape" fill="#FFFFFF"></path>
+                    <polygon id="Shape" fill="#FFFFFF" points="15.7600002 14 13.7600002 14 13.7600002 16 12.7600002 16 12.7600002 14 10.7600002 14 10.7600002 13 12.7600002 13 12.7600002 11 13.7600002 11 13.7600002 13 15.7600002 13"></polygon>
+                    <g id="ic_crop_free_black_24px" transform="translate(3.000000, 3.000000)" fill="#FFFFFF">
+                        <g id="Group">
+                            <path d="M0,2 L0,6 L2,6 L2,2 L6,2 L6,0 L2,0 C0.9,0 0,0.9 0,2 Z M2,6 L0,6 L0,16 C0,17.1 0.9,18 2,18 L6,18 L6,16 L2,16 L2,6 Z M15,0 L6,0 L6,2 L15,2 L15,6 L17,6 L17,2 C17,0.9 16.1,0 15,0 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
