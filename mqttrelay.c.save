@@ -22,11 +22,9 @@ volatile MQTTClient_deliveryToken deliveredtoken;
 #define RELAY6 24
 #define RELAY7 25
 
-int allrelays[] = {RELAY0,RELAY1,RELAY2,RELAY3,RELAY4,RELAY5,RELAY6,RELAY7};
-
 void switchrl(char relay)
 {
-	printf("Acionado relay: %c \n", relay);
+	printf("Acionado relay:%c", relay);
 	switch(relay)
 	{
 	  case '0':
@@ -54,17 +52,8 @@ void switchrl(char relay)
         digitalWrite(RELAY7, !digitalRead(RELAY7));	
 		break;
 	  case '8':
+	digitalWrite(RELAY0,HIGH);
 
-		for(int n=0;n<8;n++)
-		{
-			digitalWrite(allrelays[n],HIGH);
-		}
-		break;
-	 case '9':
-		for(int n=0;n<8;n++)
-		{
-			digitalWrite(allrelays[n],LOW);
-		}
 	}
 }
 
